@@ -1807,8 +1807,8 @@ CONFIG_ZABBIX_POSTGRESQL=y
 #
 # Derry Apps
 #
-# CONFIG_PACKAGE_appfilter is not set
-# CONFIG_PACKAGE_kmod-oaf is not set
+CONFIG_PACKAGE_appfilter=y
+CONFIG_PACKAGE_kmod-oaf=y
 # end of Derry Apps
 
 #
@@ -4654,7 +4654,7 @@ CONFIG_PACKAGE_luci-newapi=y
 CONFIG_PACKAGE_luci-app-accesscontrol=y
 # CONFIG_PACKAGE_luci-app-adblock is not set
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
-# CONFIG_PACKAGE_luci-app-adguardhome is not set
+CONFIG_PACKAGE_luci-app-adguardhome=y
 # CONFIG_PACKAGE_luci-app-advanced is not set
 # CONFIG_PACKAGE_luci-app-advanced-reboot is not set
 # CONFIG_PACKAGE_luci-app-ahcp is not set
@@ -4752,14 +4752,14 @@ CONFIG_PACKAGE_luci-app-nlbwmon=y
 # CONFIG_PACKAGE_luci-app-noddos is not set
 # CONFIG_PACKAGE_luci-app-nps is not set
 # CONFIG_PACKAGE_luci-app-ntpc is not set
-# CONFIG_PACKAGE_luci-app-oaf is not set
+CONFIG_PACKAGE_luci-app-oaf=y
 # CONFIG_PACKAGE_luci-app-ocserv is not set
 # CONFIG_PACKAGE_luci-app-olsr is not set
 # CONFIG_PACKAGE_luci-app-olsr-services is not set
 # CONFIG_PACKAGE_luci-app-olsr-viz is not set
 CONFIG_PACKAGE_luci-app-onliner=y
 CONFIG_PACKAGE_luci-app-openclash=y
-# CONFIG_PACKAGE_luci-app-openvpn is not set
+CONFIG_PACKAGE_luci-app-openvpn=y
 # CONFIG_PACKAGE_luci-app-openvpn-server is not set
 CONFIG_PACKAGE_luci-app-p910nd=y
 # CONFIG_PACKAGE_luci-app-pagekitec is not set
@@ -4811,7 +4811,7 @@ CONFIG_PACKAGE_luci-app-samba=y
 # CONFIG_PACKAGE_luci-app-shairplay is not set
 # CONFIG_PACKAGE_luci-app-siitwizard is not set
 # CONFIG_PACKAGE_luci-app-simple-adblock is not set
-# CONFIG_PACKAGE_luci-app-smartdns is not set
+CONFIG_PACKAGE_luci-app-smartdns=y
 CONFIG_PACKAGE_luci-app-socat=y
 # CONFIG_PACKAGE_luci-app-softethervpn is not set
 # CONFIG_PACKAGE_luci-app-splash is not set
@@ -5039,6 +5039,32 @@ CONFIG_PACKAGE_luci-i18n-nfs-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-nlbwmon-ja is not set
 # CONFIG_PACKAGE_luci-i18n-nlbwmon-ru is not set
 CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-oaf-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-openvpn-ca is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-cs is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-de is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-el is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-en is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-es is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-fr is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-he is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-hu is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-it is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-ja is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-ms is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-no is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-pl is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-pt is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-pt-br is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-ro is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-ru is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-sk is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-sv is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-tr is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-uk is not set
+# CONFIG_PACKAGE_luci-i18n-openvpn-vi is not set
+CONFIG_PACKAGE_luci-i18n-openvpn-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-openvpn-zh-tw is not set
 # CONFIG_PACKAGE_luci-i18n-p910nd-ca is not set
 # CONFIG_PACKAGE_luci-i18n-p910nd-cs is not set
 # CONFIG_PACKAGE_luci-i18n-p910nd-de is not set
@@ -5090,6 +5116,8 @@ CONFIG_PACKAGE_luci-i18n-ramfree-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-samba-vi is not set
 CONFIG_PACKAGE_luci-i18n-samba-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-samba-zh-tw is not set
+CONFIG_PACKAGE_luci-i18n-smartdns-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-smartdns-zh_Hans is not set
 CONFIG_PACKAGE_luci-i18n-socat-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-ssr-plus-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-ssr-plus-zh_Hans is not set
@@ -6344,7 +6372,7 @@ CONFIG_PACKAGE_SAMBA_MAX_DEBUG_LEVEL=-1
 # CONFIG_PACKAGE_simple-adblock is not set
 # CONFIG_PACKAGE_simple-obfs-client is not set
 # CONFIG_PACKAGE_simple-obfs-server is not set
-# CONFIG_PACKAGE_smartdns is not set
+CONFIG_PACKAGE_smartdns=y
 # CONFIG_PACKAGE_smbinfo is not set
 # CONFIG_PACKAGE_snmp-mibs is not set
 # CONFIG_PACKAGE_snmp-utils is not set
