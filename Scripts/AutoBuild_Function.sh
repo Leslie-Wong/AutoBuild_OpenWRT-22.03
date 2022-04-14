@@ -21,7 +21,7 @@ Firmware-Diy_Before() {
 		Openwrt_Version_Head="R${OP_BRANCH}-"
 	fi
 	case "${OP_Maintainer}/${OP_REPO_NAME}" in
-	xiaowansm5/lede)
+	coolsnowwolf/lede)
 		Version_File=package/lean/default-settings/files/zzz-default-settings
 		zzz_Default_Version="$(egrep -o "R[0-9]+\.[0-9]+\.[0-9]+" ${Version_File})"
 		CURRENT_Version="${zzz_Default_Version}-${Compile_Date}"
@@ -124,7 +124,7 @@ Firmware-Diy_Main() {
 		Copy ${CustomFiles}/Depends/base-files-essential ${base_files}/lib/upgrade/keep.d
 		AutoUpdate_Version=$(egrep -o "V[0-9].+" ${base_files}/bin/AutoUpdate.sh | awk 'NR==1')
 		case "${OP_Maintainer}/${OP_REPO_NAME}" in
-		xiaowansm5/lede)
+		coolsnowwolf/lede)
 			Copy ${CustomFiles}/Depends/coremark.sh ${Home}/$(PKG_Finder d "package feeds" coremark)
 			sed -i "s?iptables?#iptables?g" ${Version_File}
 			sed -i "s?${zzz_Default_Version}?${zzz_Default_Version} @ ${Author} [${Display_Date}]?g" ${Version_File}
@@ -150,7 +150,7 @@ Firmware-Diy_Main() {
 	fi
 	[[ ${INCLUDE_Argon} == true ]] && {
 		case "${OP_Maintainer}/${OP_REPO_NAME}:${OP_BRANCH}" in
-		xiaowansm5/lede:master)
+		coolsnowwolf/lede:master)
 			AddPackage git lean luci-theme-argon jerrykuku 18.06
 		;;
 		[Ll]ienol/openwrt:main)
@@ -193,8 +193,8 @@ Firmware-Diy_Main() {
 		for X in $(ls -1 target/linux/x86 | grep "config-"); do echo -e "\n$(cat target/linux/x86/DRM-I915)" >> target/linux/x86/${X}; done
 	}
 	case "${OP_Maintainer}/${OP_REPO_NAME}" in
-	xiaowansm5/lede)
-		ECHO "Downloading [ShadowSocksR Plus+] for cxiaowansm5/lede ..."
+	coolsnowwolf/lede)
+		ECHO "Downloading [ShadowSocksR Plus+] for coolsnowwolf/lede ..."
 		AddPackage git other helloworld fw876 master
 		sed -i 's/143/143,8080,8443/' $(PKG_Finder d package luci-app-ssr-plus)/root/etc/init.d/shadowsocksr
 	;;

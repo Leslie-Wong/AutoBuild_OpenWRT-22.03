@@ -38,7 +38,7 @@ Firmware-Diy() {
 	# base_files		绝对路径,等同 ${GITHUB_WORKSPACE}/openwrt/package/base-files/files
 
 	case "${OP_Maintainer}/${OP_REPO_NAME}:${OP_BRANCH}" in
-	xiaowansm5/lede:master)
+	coolsnowwolf/lede:master)
 		sed -i "s?/bin/login?/usr/libexec/login.sh?g" ${feeds_pkgs}/ttyd/files/ttyd.config
 	;;
 	esac
