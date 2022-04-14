@@ -21,7 +21,7 @@ Firmware-Diy_Before() {
 		Openwrt_Version_Head="R${OP_BRANCH}-"
 	fi
 	case "${OP_Maintainer}/${OP_REPO_NAME}" in
-	coolsnowwolf/lede)
+	xiaowansm5/lede)
 		Version_File=package/lean/default-settings/files/zzz-default-settings
 		zzz_Default_Version="$(egrep -o "R[0-9]+\.[0-9]+\.[0-9]+" ${Version_File})"
 		CURRENT_Version="${zzz_Default_Version}-${Compile_Date}"
@@ -124,7 +124,7 @@ Firmware-Diy_Main() {
 		Copy ${CustomFiles}/Depends/base-files-essential ${base_files}/lib/upgrade/keep.d
 		AutoUpdate_Version=$(egrep -o "V[0-9].+" ${base_files}/bin/AutoUpdate.sh | awk 'NR==1')
 		case "${OP_Maintainer}/${OP_REPO_NAME}" in
-		coolsnowwolf/lede)
+		xiaowansm5/lede)
 			Copy ${CustomFiles}/Depends/coremark.sh ${Home}/$(PKG_Finder d "package feeds" coremark)
 			sed -i "s?iptables?#iptables?g" ${Version_File}
 			sed -i "s?${zzz_Default_Version}?${zzz_Default_Version} @ ${Author} [${Display_Date}]?g" ${Version_File}
@@ -150,7 +150,7 @@ Firmware-Diy_Main() {
 	fi
 	[[ ${INCLUDE_Argon} == true ]] && {
 		case "${OP_Maintainer}/${OP_REPO_NAME}:${OP_BRANCH}" in
-		coolsnowwolf/lede:master)
+		xiaowansm5/lede:master)
 			AddPackage git lean luci-theme-argon jerrykuku 18.06
 		;;
 		[Ll]ienol/openwrt:main)
