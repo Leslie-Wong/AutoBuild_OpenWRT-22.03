@@ -193,8 +193,8 @@ Firmware-Diy_Main() {
 		for X in $(ls -1 target/linux/x86 | grep "config-"); do echo -e "\n$(cat target/linux/x86/DRM-I915)" >> target/linux/x86/${X}; done
 	}
 	case "${OP_Maintainer}/${OP_REPO_NAME}" in
-	coolsnowwolf/lede)
-		ECHO "Downloading [ShadowSocksR Plus+] for coolsnowwolf/lede ..."
+	xiaowansm5/lede)
+		ECHO "Downloading [ShadowSocksR Plus+] for cxiaowansm5/lede ..."
 		AddPackage git other helloworld fw876 master
 		sed -i 's/143/143,8080,8443/' $(PKG_Finder d package luci-app-ssr-plus)/root/etc/init.d/shadowsocksr
 	;;
